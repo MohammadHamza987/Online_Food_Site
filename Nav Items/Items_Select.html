@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Taste</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Burger</td>
+                <td>$5</td>
+                <td>Delicious</td>
+            </tr>
+            <tr>
+                <td>Pizza</td>
+                <td>$8</td>
+                <td>Cheesy</td>
+            </tr>
+            <tr>
+                <td>Pasta</td>
+                <td>$7</td>
+                <td>Spicy</td>
+            </tr>
+            <tr>
+                <td colspan="3">Biryani</td>
+            </tr>
+         </tbody>
+    </table>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px 0;
+            font-size: 16px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #1f2937;
+            /* dark gray */
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e2e8f0;
+            /* soft highlight on hover */
+            transition: 0.2s;
+        }
+
+        @media screen and (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+            }
+        }
+    </style>
+</body>
+
+</html>

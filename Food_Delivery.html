@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Delivery - Very Easy</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background Video */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 1;
+      pointer-events: none;
+      filter: brightness(0.8);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffdf8;
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Header + Nav */
+    header {
+      /* background: rgba(0, 0, 0, 0.6); */
+      padding: 16px 20px;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      font-weight: bold;
+      font-size: 17px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+
+    nav a:hover {
+      color: #054452;
+      background: #ffe5b4;
+      box-shadow: 0 2px 8px rgba(255, 229, 180, 0.2);
+    }
+
+    .registerme a {
+      background-color: #ff6f00;
+      color: white;
+      position: right;
+      
+      
+
+    }
+
+    /* Main Content */
+    main {
+      padding: 60px 20px 20px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    main h2 {
+      color: #f4f8fa;
+      margin-bottom: 24px;
+      font-size: 40px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(8, 66, 129, 0.1);
+    }
+
+    section article {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 32px;
+      margin: 0 auto 32px auto;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border: 1px solid #eee;
+    }
+
+    section article div {
+      font-size: 24px;
+      font-weight: bold;
+      color: #054452;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    section article span {
+      display: block;
+      font-size: 19px;
+      color: #888;
+      margin-bottom: 12px;
+    }
+
+    section article p {
+      font-size: 17px;
+      color: #555;
+    }
+
+    /* Lists */
+    ol,
+    ul {
+      background: rgba(255, 255, 255, 0.92);
+      max-width: 500px;
+      margin: 24px auto;
+      padding: 24px 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(8, 66, 129, 0.07);
+      border: 1px solid #f3e9d2;
+      text-align: left;
+    }
+
+    ol h2,
+    ul h2 {
+      color: #084281;
+      font-size: 22px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    ol li,
+    ul li {
+      font-size: 17px;
+      margin-bottom: 10px;
+      padding-left: 4px;
+      color: #054452;
+      transition: background 0.2s;
+      border-radius: 4px;
+    }
+
+    ol li:hover,
+    ul li:hover {
+      background: #ffe5b4;
+      color: #222;
+    }
+
+    /* Footer */
+    footer {
+      color: #fff;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 18px 0;
+      margin-top: 48px;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      box-shadow: 0 -2px 8px rgba(34, 34, 34, 0.08);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 8px 10px;
+      }
+
+      main h2 {
+        font-size: 22px;
+      }
+
+      section article {
+        padding: 18px;
+        border-radius: 10px;
+      }
+
+      ol,
+      ul {
+        padding: 14px 10px;
+        border-radius: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="/Nav Items/Items_Select.html">Order Now</a>
+      <a href="/Nav Items/About.html">About</a>
+      <a href="/Nav Items/ContactMe.html">Contact</a>
+      <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+      <div class="registerme">
+        <a href="/Nav Items/Registration.html">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>The Kravingz</h1>
+    <h2>Assalamualikum<br>Order your Food Online 24 X 7 InshaAllah</h2>
+    <section>
+      <article>
+        <div>Hello We are a Food Delivery Website that serves 100 % Halal Items</div>
+        <span>Welcome</span>
+        <p>You can place your orders anytime anywhere</p>
+      </article>
+    </section>
+  </main>
+
+  <video autoplay muted loop id="bg-video">
+    <source src="videos/Pizza.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <ol>
+    <h2>Steps to order</h2>
+    <li>Order your food online</li>
+    <li>Get it delivered to your doorstep</li>
+    <li>Enjoy delicious meals</li>
+    <li>Available 24/7</li>
+  </ol>
+
+  <ul>
+    <h2>Features</h2>
+    <li>Fast Delivery</li>
+    <li>Wide Variety of Cuisines</li>
+    <li>Secure Payment Options</li>
+    <li>Customer Support</li>
+  </ul>
+
+  <footer>2025 all rights reserved</footer>
+</body>
+
+</html>

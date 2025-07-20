@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #fff8e1 0%, #ffe0b2 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-container {
+    background: rgba(255,255,255,0.95);
+    padding: 48px 36px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(255, 111, 0, 0.15), 0 2px 8px rgba(0,0,0,0.08);
+    border: 3px solid #ff6f00;
+    position: relative;
+    animation: fadeIn 1s;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  .contact-container h2 {
+    font-size: 28px;
+    color: #ff6f00;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #ffe0b2;
+  }
+
+  .contact-container h3 {
+    font-size: 22px;
+    color: #d35400;
+    margin-bottom: 32px;
+    font-weight: 500;
+    background: linear-gradient(90deg, #ffe0b2 60%, #fff8e1 100%);
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 1px 4px rgba(255, 111, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .contact-container h3::before {
+    content: "📞";
+    font-size: 22px;
+    margin-right: 6px;
+  }
+
+  .back-link {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(90deg, #ff6f00 70%, #ffa040 100%);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 17px;
+    box-shadow: 0 2px 8px rgba(255, 111, 0, 0.12);
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+  }
+
+  .back-link:hover {
+    background: linear-gradient(90deg, #e65c00 70%, #ffb74d 100%);
+    transform: scale(1.05);
+  }
+
+  /* Decorative icon */
+  .contact-icon {
+    font-size: 40px;
+    color: #ff6f00;
+    margin-bottom: 18px;
+    animation: bounce 1.2s infinite alternate;
+    display: inline-block;
+  }
+
+  @keyframes bounce {
+    from { transform: translateY(0);}
+    to { transform: translateY(-10px);}
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .contact-container {
+    padding: 28px 12px;
+    border-radius: 12px;
+    }
+    .contact-container h2 {
+    font-size: 22px;
+    }
+    .contact-container h3 {
+    font-size: 17px;
+    padding: 8px 0;
+    }
+    .back-link {
+    padding: 10px 18px;
+    font-size: 15px;
+    }
+    .contact-icon {
+    font-size: 32px;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <span class="contact-icon">👋</span>
+    <h2>Hello, you can contact me below</h2>
+    <h3>+91-8787201340</h3>
+    <a class="back-link" href="Food_Delivery.html">Back</a>
+  </div>
+</body>
+</html>

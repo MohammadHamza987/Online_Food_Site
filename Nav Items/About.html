@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #fff3e0 0%, #95a8bf 100%);
+  color: #333;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.5s;
+}
+
+/* Main container */
+.about-container {
+  background: rgba(255,255,255,0.95);
+  padding: 48px 36px;
+  max-width: 650px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(4, 115, 176, 0.18), 0 2px 8px rgba(0,0,0,0.07);
+  text-align: center;
+  border: 3px solid #0473b0;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Decorative gradient border */
+.about-container::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 24px;
+  z-index: -1;
+  background: linear-gradient(90deg, #0473b0 0%, #ffb347 100%);
+  opacity: 0.18;
+}
+
+/* Headings */
+.about-container h1 {
+  font-size: 38px;
+  color: #0979c8;
+  margin-bottom: 18px;
+  text-shadow: 2px 2px 0 #fff3e0, 0 2px 8px #0473b033;
+  font-weight: 700;
+  letter-spacing: 1px;
+  animation: fadeInDown 0.7s;
+}
+
+.about-container h2 {
+  font-size: 26px;
+  color: #0721b3;
+  margin-bottom: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  animation: fadeInDown 0.9s;
+}
+
+/* Paragraphs */
+.about-container p {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.7;
+  animation: fadeIn 1.1s;
+}
+
+/* FAQ Section */
+dl {
+  background: linear-gradient(90deg, #e3f2fd 0%, #fffde4 100%);
+  border-radius: 12px;
+  padding: 24px 18px;
+  margin-top: 18px;
+  box-shadow: 0 2px 8px rgba(4,115,176,0.08);
+  text-align: left;
+  animation: fadeInUp 1.2s;
+}
+
+dl h2 {
+  text-align: center;
+  color: #0473b0;
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+dt {
+  font-weight: 600;
+  color: #0979c8;
+  margin-top: 12px;
+  font-size: 17px;
+}
+
+dd {
+  margin-left: 18px;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 16px;
+  border-left: 3px solid #0473b0;
+  padding-left: 10px;
+}
+
+/* Add hover effect to container */
+.about-container:hover {
+  transform: scale(1.025) translateY(-2px);
+  box-shadow: 0 18px 40px rgba(4,115,176,0.22), 0 4px 16px rgba(0,0,0,0.09);
+}
+
+/* Subtle hover for FAQ items */
+dt:hover, dd:hover {
+  background: #e3f2fd;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .about-container {
+  padding: 28px 12px;
+  max-width: 98vw;
+  border-radius: 12px;
+  }
+  .about-container h1 {
+  font-size: 28px;
+  }
+  .about-container h2 {
+  font-size: 20px;
+  }
+  dl {
+  padding: 14px 8px;
+  }
+}
+
+/* Decorative lines */
+.about-container h1::after {
+  content: "";
+  display: block;
+  margin: 12px auto 0;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0473b0 0%, #ffb347 100%);
+  opacity: 0.7;
+}
+</style>
+<body>
+  <div class="about-container">
+    <h1>About me</h1>
+    <h2>My name is Mohammad Hamza</h2>
+    <p>I am a web developer with a passion for creating dynamic and responsive websites.</p>
+    <p>In my free time, I enjoy learning new technologies and improving my skills.</p>
+    <dl>
+      <h2>Frequently Asked Questions</h2>
+      <dt>Delivery Time</dt>
+      <dd>Average delivery time is 30 minutes</dd>
+      <dt>Payment Methods</dt>
+      <dd>We accept credit cards, debit cards, and cash on delivery</dd>
+      <dt>Customer Support</dt>
+      <dd>Available 24/7 via phone and email</dd>
+    </dl>
+  </div>
+</body>
+</html>
