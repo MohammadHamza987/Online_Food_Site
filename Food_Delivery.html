@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food Delivery - Very Easy</title>
   <style>
+    #foooter {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
     /* Reset */
     * {
       margin: 0;
@@ -49,6 +55,12 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 14px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 10;
     }
 
     nav a {
@@ -68,13 +80,16 @@
       box-shadow: 0 2px 8px rgba(255, 229, 180, 0.2);
     }
 
+    .registerme {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+    }
+
     .registerme a {
       background-color: #ff6f00;
+      margin-left: 700px;
       color: white;
-      position: right;
-      
-      
-
     }
 
     /* Main Content */
@@ -208,19 +223,24 @@
 
   <header>
     <nav>
-      <a href="#">Home</a>
-      <a href="/Nav Items/Items_Select.html">Order Now</a>
-      <a href="/Nav Items/About.html">About</a>
-      <a href="/Nav Items/ContactMe.html">Contact</a>
+      <a href="Food_Delivery.html">Home</a>
+      <a href="Nav Items/Items_Select.html">Order Now</a>
+      <a href="Nav Items/About.html">About</a>
+      <a href="Nav Items/ContactMe.html">Contact</a>
       <a href="https://www.facebook.com/" target="_blank">Facebook</a>
       <div class="registerme">
-        <a href="/Nav Items/Registration.html">Register</a>
+        <a href="Nav Items/Registration.html">Register</a>
+      </div>
+      <div class="loginme">
+        <a href="Nav Items/Login.html">Login</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <h1>The Kravingz</h1>
+    <h1> <img src="/images/Burger.png" alt="Food Delivery Logo"
+        style="max-width:180px; border-radius:12px; border:none;">
+    </h1>
     <h2>Assalamualikum<br>Order your Food Online 24 X 7 InshaAllah</h2>
     <section>
       <article>
@@ -251,8 +271,9 @@
     <li>Secure Payment Options</li>
     <li>Customer Support</li>
   </ul>
-
-  <footer>2025 all rights reserved</footer>
+  <div id="foooter">
+    <footer>2025 all rights reserved</footer>
+  </div>
 </body>
 
 </html>
