@@ -13,76 +13,624 @@
             <tr>
                 <th>Name</th>
                 <th>Price</th>
-                <th>Taste</th>
+                <th>Meal Type</th>
+                <th>Quantity</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Burger</td>
-                <td>$5</td>
-                <td>Delicious</td>
+                <td>Chicken Masala</td>
+                <td>220</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td>Pizza</td>
-                <td>$8</td>
-                <td>Cheesy</td>
+                <td>Chicken Korma</td>
+                <td>170</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td>Pasta</td>
-                <td>$7</td>
-                <td>Spicy</td>
+                <td>Chicken Tasla</td>
+                <td>290</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td colspan="3">Biryani</td>
+                <td>Awadhi Chicken Biryani</td>
+                <td>350</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
             </tr>
-         </tbody>
+            <tr>
+                <td>Chicken Biryani</td>
+                <td>300</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Chicken Tikka</td>
+                <td>200</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Chicken Seekh Kebab</td>
+                <td>180</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Chicken Tandoori</td>
+                <td>250</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Mutton Kadai</td>
+                <td>220</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Mutton Rogan Josh</td>
+                <td>300</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Mutton Biryani</td>
+                <td>350</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Mutton Seekh Kebab</td>
+                <td>200</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Awadhi Mutton Biryani</td>
+                <td>250</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Paneer Butter Masala</td>
+                <td>180</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Paneer Tikka</td>
+                <td>150</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Paneer Do Pyaza</td>
+                <td>200</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Chilly Paneer</td>
+                <td>220</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Dal Bukhara</td>
+                <td>250</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Dal Makhani</td>
+                <td>200</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Dal Tadka</td>
+                <td>180</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Rice</td>
+                <td>80</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="1" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Plain Naan</td>
+                <td>50</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Butter Naan</td>
+                <td>60</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="0" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Garlic Naan</td>
+                <td>70</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="1" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Roti</td>
+                <td>40</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="1" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Paratha</td>
+                <td>80</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="1" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Veg Biryani</td>
+                <td>150</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="1" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Veg Pulao</td>
+                <td>120</td>
+                <td>
+                    <select>
+                        <option value="Half">Half</option>
+                        <option value="Full">Full</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQty(this)">−</button>
+                        <input type="text" value="1" readonly>
+                        <button onclick="increaseQty(this)">+</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+
     </table>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px 0;
-            font-size: 16px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
+    body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f3f4f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        th,
-        td {
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
 
-        th {
-            background-color: #1f2937;
-            /* dark gray */
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+th,
+td {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: middle;
+}
 
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
+th {
+    background-color: #1f2937;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
 
-        tr:hover {
-            background-color: #e2e8f0;
-            /* soft highlight on hover */
-            transition: 0.2s;
-        }
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
 
-        @media screen and (max-width: 768px) {
-            table {
-                font-size: 14px;
+tr:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s;
+}
+
+select {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    background-color: white;
+    appearance: none;
+    width: 100px;
+    text-align: center;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.quantity-control button {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #edf2f7;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quantity-control button:hover {
+    background-color: #e2e8f0;
+}
+
+.quantity-control input {
+    width: 40px;
+    height: 32px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    background-color: white;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    .quantity-control {
+        gap: 6px;
+    }
+
+    .quantity-control button,
+    .quantity-control input {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    select {
+        width: 80px;
+        font-size: 13px;
+    }
+}
+</style>
+   
+    <script>
+
+        function increaseQty(button) {
+            const input = button.parentElement.querySelector('input');
+            let value = parseInt(input.value);
+            if (value < 99) {
+                input.value = value + 1;
             }
+        }
 
-            th,
-            td {
-                padding: 10px;
+        function decreaseQty(button) {
+            const input = button.parentElement.querySelector('input');
+            let value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
             }
         }
-    </style>
+    </script>
 </body>
 
 </html>
