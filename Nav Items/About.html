@@ -7,6 +7,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <style>
+  /* Background Video */
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
+    pointer-events: none;
+    filter: brightness(0.7);
+  }
 /* Reset */
 * {
   margin: 0;
@@ -173,6 +186,11 @@ dt:hover, dd:hover {
 }
 </style>
 <body>
+  <main>
+     <video autoplay muted loop id="bg-video">
+    <source src="../Videos/newvideo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </main>
   <div class="about-container">
     <h1>About me</h1>
     <h2>My name is Mohammad Hamza</h2>
