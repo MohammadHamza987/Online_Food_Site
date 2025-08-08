@@ -2,164 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halal Food Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu - Halal Non-Veg</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(120deg, #0f0f1b, #1a1a2e);
+      background: linear-gradient(to right, #000000, #0f0f0f);
       color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 255, 255, 0.1);
-      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     h1 {
-      background: linear-gradient(to right, #00ffe7, #00ff87);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      margin-top: 30px;
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #00ffc3;
     }
 
-    .menu-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px;
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 1200px;
     }
 
     .item {
       background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid #00ffc3;
       border-radius: 15px;
       padding: 20px;
+      width: 220px;
       text-align: center;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
-      transition: 0.3s;
+      box-shadow: 0 0 15px #00ffc3a4;
     }
 
-    .item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    .item h2 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
     }
 
-    .item button {
-      margin-top: 10px;
-      padding: 8px 15px;
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+    }
+
+    .btn {
+      background: #00ffc3;
       border: none;
-      border-radius: 20px;
-      background: #00ffe7;
-      color: #000;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .item select {
-      margin-top: 10px;
-      padding: 5px 10px;
-      border-radius: 10px;
-      border: none;
-    }
-
-    .cart {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-    }
-
-    .home-link {
-      display: inline-block;
-      margin: 30px;
-      text-align: center;
+      padding: 6px 12px;
       font-size: 1rem;
-      padding: 10px 20px;
-      color: #0f0f1b;
-      background: #00ffe7;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: all 0.3s ease;
+      cursor: pointer;
+      color: #000;
+      border-radius: 5px;
+      transition: background 0.3s;
     }
 
-    .home-link:hover {
-      transform: scale(1.05);
-      background: #00ffb0;
+    .btn:hover {
+      background: #00b48e;
+    }
+
+    .footer-buttons {
+      margin: 40px 0;
+    }
+
+    .footer-buttons a {
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #00ffc3;
+      color: #000;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .footer-buttons a:hover {
+      background-color: #00b48e;
+    }
+
+    .top-cart-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: #00ffc3;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00ffc3a4;
+      transition: background 0.3s;
+    }
+
+    .top-cart-btn:hover {
+      background-color: #00b48e;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🍗 Halal Muslim Food Menu</h1>
-  </header>
+  <!-- Go to Cart button on top -->
+  <a href="../Nav Items/CartPage.html" class="top-cart-btn">🛒 Go to Cart</a>
 
-  <div class="cart" id="cart">Cart: ₹<span id="cartTotal">0</span></div>
+  <h1>Halal Non-Veg Menu</h1>
 
-  <div class="menu-container" id="menu"></div>
+  <div class="menu" id="menu"></div>
 
-  <a href="../Food_Delivery.html" class="home-link">← Back to Home</a>
+  <div class="footer-buttons">
+    <a href="../Food_Delivery.html">← Back to Home</a>
+  </div>
 
   <script>
     const items = [
-      { name: 'Chicken Biryani', price: 180 },
-      { name: 'Mutton Korma', price: 240 },
-      { name: 'Beef Nihari', price: 260 },
-      { name: 'Tandoori Chicken', price: 220 },
-      { name: 'Butter Chicken', price: 210 },
-      { name: 'Chicken Shawarma', price: 150 },
-      { name: 'Mutton Rogan Josh', price: 230 },
-      { name: 'Kebabs Platter', price: 250 },
-      { name: 'Chicken Malai Tikka', price: 200 },
-      { name: 'Chicken Keema', price: 180 },
-      { name: 'Beef Paya', price: 200 },
-      { name: 'Chicken 65', price: 160 },
-      { name: 'Hyderabadi Mutton Biryani', price: 250 },
-      { name: 'Afghani Chicken', price: 230 },
-      { name: 'Seekh Kebab', price: 180 },
-      { name: 'Chicken Curry', price: 170 },
-      { name: 'Mutton Stew', price: 210 },
-      { name: 'Beef Boti', price: 190 },
-      { name: 'Chicken Kathi Roll', price: 140 },
-      { name: 'Tandoori Roti (2pcs)', price: 30 },
-      { name: 'Beef Kofta', price: 210 },
-      { name: 'Chicken Rezala', price: 190 },
-      { name: 'Mutton Keema Pav', price: 170 },
-      { name: 'Beef Burger (Halal)', price: 160 },
-      { name: 'Spicy Chicken Wings', price: 150 }
+      "Chicken Biryani", "Mutton Korma", "Beef Nihari", "Chicken Shawarma", "Mutton Seekh Kebab",
+      "Chicken Changezi", "Butter Chicken", "Chicken Malai Tikka", "Mutton Rogan Josh", "Chicken Keema Paratha",
+      "Chicken 65", "Mutton Haleem", "Beef Kebab Roll", "Chicken Kathi Roll", "Chicken Tikka Masala",
+      "Mutton Biryani", "Afghani Chicken", "Chicken Pakora", "Tandoori Chicken", "Mutton Galouti Kebab",
+      "Chicken Pulao", "Chicken Soup", "Beef Biryani", "Chicken Lollipop", "Mutton Keema Naan"
     ];
 
-    let cartTotal = 0;
+    const menuDiv = document.getElementById("menu");
+    const quantities = Array(items.length).fill(1);
 
-    const menu = document.getElementById('menu');
-    const cart = document.getElementById('cartTotal');
+    items.forEach((itemName, index) => {
+      const itemDiv = document.createElement("div");
+      itemDiv.className = "item";
 
-    items.forEach((item, index) => {
-      const div = document.createElement('div');
-      div.className = 'item';
-      div.innerHTML = `
-        <h3>${item.name}</h3>
-        <p>₹${item.price}</p>
-        <select id="qty-${index}">
-          ${[...Array(10)].map((_, i) => `<option value="${i + 1}">${i + 1}</option>`).join('')}
-        </select>
-        <br>
-        <button onclick="addToCart(${index})">Add to Cart</button>
+      itemDiv.innerHTML = `
+        <h2>${itemName}</h2>
+        <p>₹${200 + index * 10}</p>
+        <div class="controls">
+          <button class="btn" onclick="changeQuantity(${index}, -1)">-</button>
+          <span id="qty-${index}">${quantities[index]}</span>
+          <button class="btn" onclick="changeQuantity(${index}, 1)">+</button>
+        </div>
+        <button class="btn" onclick="addToCart(${index})">Add to Cart</button>
       `;
-      menu.appendChild(div);
+
+      menuDiv.appendChild(itemDiv);
     });
 
+    function changeQuantity(index, delta) {
+      quantities[index] = Math.max(1, quantities[index] + delta);
+      document.getElementById(`qty-${index}`).textContent = quantities[index];
+    }
+
     function addToCart(index) {
-      const qty = document.getElementById(`qty-${index}`).value;
-      cartTotal += items[index].price * qty;
-      cart.innerText = cartTotal;
+      let cart = JSON.parse(localStorage.getItem("halalCart")) || [];
+      const existing = cart.find(i => i.name === items[index]);
+
+      if (existing) {
+        existing.quantity += quantities[index];
+      } else {
+        cart.push({
+          name: items[index],
+          price: 200 + index * 10,
+          quantity: quantities[index]
+        });
+      }
+
+      localStorage.setItem("halalCart", JSON.stringify(cart));
     }
   </script>
 </body>
