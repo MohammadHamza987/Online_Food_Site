@@ -1,424 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Mohammad Hamza - Web Developer specializing in dynamic and responsive websites">
-  <meta name="keywords" content="Mohammad Hamza, web developer, portfolio, food delivery">
-  <meta name="author" content="Mohammad Hamza">
-  <title>About Us - Online Food Store</title>
-  <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Mohammad Hamza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    /* Reset */
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Body styling */
-    body {
-      font-family: 'Poppins', 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: #333;
-      min-height: 100vh;
-      position: relative;
+      background: linear-gradient(120deg, #0f0f1b, #1a1a2e);
+      font-family: 'Orbitron', sans-serif;
       overflow-x: hidden;
+      color: #fff;
     }
 
-    /* Background Video */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-      opacity: 0.3;
-      pointer-events: none;
-      filter: brightness(0.7) blur(1px);
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      font-weight: 500;
-      font-size: 16px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 25px;
-      transition: all 0.3s ease;
-      border: 1px solid transparent;
-    }
-
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    nav a.active {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    /* Main container */
-    .page-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: calc(100vh - 80px);
-      padding: 40px 20px;
-    }
-
-    .about-container {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 50px 40px;
+    .container {
       max-width: 800px;
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      margin: 100px auto;
+      background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
     }
 
-    /* Decorative elements */
-    .about-container::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
-      animation: rotate 20s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Headings */
-    .about-container h1 {
-      font-size: 42px;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #00ffe7, #00ff87);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      animation: fadeInDown 0.8s ease-out;
     }
 
-    .about-container h2 {
-      font-size: 28px;
-      color: #4a5568;
-      margin-bottom: 25px;
-      font-weight: 600;
-      animation: fadeInDown 1s ease-out;
-    }
-
-    /* Paragraphs */
-    .about-container p {
-      font-size: 18px;
-      color: #2d3748;
-      margin-bottom: 20px;
+    p {
+      font-size: 1.1rem;
       line-height: 1.8;
-      animation: fadeIn 1.2s ease-out;
-    }
-
-    .about-container a {
-      color: #667eea;
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease;
-    }
-
-    .about-container a:hover {
-      color: #764ba2;
-      border-bottom-color: #764ba2;
-    }
-
-    /* Developer info section */
-    .developer-info {
-      background: linear-gradient(135deg, #f7fafc, #edf2f7);
-      border-radius: 15px;
-      padding: 30px;
-      margin: 30px 0;
-      border-left: 5px solid #667eea;
-      animation: fadeInLeft 1.4s ease-out;
-    }
-
-    .developer-info h3 {
-      color: #2d3748;
-      font-size: 22px;
-      margin-bottom: 15px;
-      font-weight: 600;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .skill-tag {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 500;
-      animation: fadeInUp 1.6s ease-out;
-    }
-
-    /* FAQ Section */
-    .faq-section {
-      background: linear-gradient(135deg, #e6fffa, #f0fff4);
-      border-radius: 15px;
-      padding: 30px;
-      margin-top: 30px;
-      text-align: left;
-      animation: fadeInUp 1.8s ease-out;
-    }
-
-    .faq-section h2 {
       text-align: center;
-      color: #2d3748;
-      font-size: 26px;
-      margin-bottom: 25px;
-      font-weight: 700;
+      color: #ddd;
     }
 
-    .faq-item {
-      margin-bottom: 20px;
-      padding: 15px;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 10px;
+    .highlight {
+      color: #00ffe7;
+    }
+
+    .home-link {
+      display: block;
+      width: fit-content;
+      margin: 30px auto 0;
+      text-align: center;
+      font-size: 1rem;
+      padding: 10px 20px;
+      color: #0f0f1b;
+      background: #00ffe7;
+      border-radius: 30px;
+      text-decoration: none;
       transition: all 0.3s ease;
-      border-left: 4px solid #667eea;
     }
 
-    .faq-item:hover {
-      transform: translateX(5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .faq-question {
-      font-weight: 600;
-      color: #2d3748;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .faq-answer {
-      color: #4a5568;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    /* Animations */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInLeft {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px;
-      }
-
-      nav a {
-        font-size: 14px;
-        padding: 10px 15px;
-      }
-
-      .about-container {
-        padding: 30px 20px;
-        margin: 20px 10px;
-        border-radius: 15px;
-      }
-
-      .about-container h1 {
-        font-size: 32px;
-      }
-
-      .about-container h2 {
-        font-size: 24px;
-      }
-
-      .about-container p {
-        font-size: 16px;
-      }
-
-      .developer-info, .faq-section {
-        padding: 20px;
-      }
-
-      .skills {
-        gap: 8px;
-      }
-
-      .skill-tag {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .about-container h1 {
-        font-size: 28px;
-      }
-
-      .about-container h2 {
-        font-size: 20px;
-      }
-
-      .faq-question {
-        font-size: 16px;
-      }
-
-      .faq-answer {
-        font-size: 14px;
-      }
+    .home-link:hover {
+      transform: scale(1.05);
+      background: #00ffb0;
     }
   </style>
 </head>
-
 <body>
-  <!-- Background Video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="../videos/newvideo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Navigation -->
-  <nav>
-    <a href="../Food_Delivery.html">Home</a>
-    <a href="Items_Select.html">Order Now</a>
-    <a href="About.html" class="active">About</a>
-    <a href="ContactMe.html">Contact</a>
-    <a href="Login.html">Login</a>
-    <a href="Registration.html">Register</a>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="page-wrapper">
-    <div class="about-container">
-      <h1>About Our Food Store</h1>
-      
-      <div class="developer-info">
-        <h3>Meet the Developer</h3>
-        <h2>Mohammad Hamza</h2>
-        <p>
-          I am a passionate web developer dedicated to creating dynamic, responsive, and user-friendly websites. 
-          This online food store project showcases modern web development techniques and best practices.
-        </p>
-        <p>
-          In my free time, I enjoy learning new technologies, exploring innovative design patterns, and 
-          continuously improving my development skills. 
-          <a href="https://mohammadhamza-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">
-            View My Portfolio →
-          </a>
-        </p>
-        
-        <div class="skills">
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Responsive Design</span>
-          <span class="skill-tag">UI/UX</span>
-        </div>
-      </div>
-
-      <div class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        
-        <div class="faq-item">
-          <div class="faq-question">🚚 What is the average delivery time?</div>
-          <div class="faq-answer">
-            Our average delivery time is 25-35 minutes, depending on your location and order complexity. 
-            We strive to deliver fresh, hot food as quickly as possible.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">💳 What payment methods do you accept?</div>
-          <div class="faq-answer">
-            We accept all major credit cards, debit cards, digital wallets (PayPal, Apple Pay, Google Pay), 
-            and cash on delivery for your convenience.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">📞 How can I contact customer support?</div>
-          <div class="faq-answer">
-            Our friendly customer support team is available 24/7 via phone, email, and live chat. 
-            Visit our Contact page for detailed information.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">🍕 Do you offer vegetarian and vegan options?</div>
-          <div class="faq-answer">
-            No Currently we do not offer vegetarian and vegan options, but we are working on expanding our menu to include
-            a variety of dietary preferences. Stay tuned for updates!
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">🔄 What is your refund policy?</div>
-          <div class="faq-answer">
-            If you're not satisfied with your order, we offer full refunds within 24 hours of delivery. 
-            Your satisfaction is our top priority.
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="container">
+    <h1>About Me</h1>
+    <p>Hey there! I'm <span class="highlight">Mohammad Hamza</span>, a passionate <span class="highlight">Frontend Developer</span> from <span class="highlight">Lucknow, India</span>. I love turning complex problems into simple, beautiful, and intuitive designs. My mission is to craft futuristic interfaces that leave a lasting impression.
+    </p>
+    <p>I specialize in <span class="highlight">HTML, CSS, JavaScript, Vue.js</span> and I'm always exploring new technologies to level up my skills. When I'm not coding, you’ll find me designing, animating, or leveling up UI/UX experiences.</p>
+    <a href="../Food_Delivery.html" class="home-link">← Back to Home</a>
   </div>
 </body>
 </html>
